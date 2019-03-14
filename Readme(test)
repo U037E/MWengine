@@ -1,0 +1,5 @@
+This is the Test-exclusive readme document.
+
+The testbranch will contain multiple versions of different files for storage and testing purposes before merging with the main project.
+Since i will run the tests localy, including test methods into the branch is not yet planned.
+There might be a seperate enginetest branch being included in the future
