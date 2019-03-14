@@ -1,16 +1,23 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package mwengine;
 
 /**
  *
- * @author Schule06
+ * @author Phil
  */
     public class engineContainer implements Runnable
  {
      private Thread thread;
      private boolean running = false;
      private final double UPDATE_CAP = 1.0/60;
-     
-    
+     private int width = 640, height = 480;
+     private float scale = 1f;
+     private String title = "MWengine v0.1";
+   
  
     
     public void run()
@@ -86,5 +93,46 @@ package mwengine;
     {
         engineContainer ec = new engineContainer();
         ec.start();
+    }
+    
+    public engineContainer()
+    {
+        
+    }
+    
+    public void setThread(Thread thread) {
+        this.thread = thread;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public void setScale(float scale) {
+        this.scale = scale;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public float getScale() {
+        return scale;
+    }
+
+    public String getTitle() {
+        return title;
     }
  }
